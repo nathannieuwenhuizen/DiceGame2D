@@ -1,0 +1,62 @@
+/*Style for the 3D dices*/
+
+/*Element*/
+#wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 100px;
+    position: absolute;
+}
+#dice, #dice2
+{ 
+    perspective: 1000px;
+    width:inherit;
+    height:inherit;
+    position:inherit;
+    transform-style: preserve-3d;  
+    transition: all 1s linear;
+}
+
+/*Face standard*/
+.face {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: 5px;
+}
+
+/*Faces of each span of the dice.*/
+.face1{
+    transform: translateZ(0px);
+    background: url(../img/diceFaces/one.jpg);
+    background-size: cover;
+}
+
+/*Spin animation*/
+@keyframes spin {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg); }
+}
+@-webkit-keyframes spin {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg); }
+}
+
+/*Move animation*/
+@keyframes diceMove { 
+  0% {left:0px;     top: 0px;}
+100% {left:500px;   top: -100px;}
+}
+@-webkit-keyframes diceMove { 
+  0% {left:0px;     top: 0px;}
+100% {left:500px;   top: -100px;}
+}
+
+@keyframes diceMove2 { 
+  0% {left:0px;}
+100% {left:700px;}
+}
+@-webkit-keyframes diceMove2 { 
+  0% {left:0px;}
+100% {left:700px;}
+}
